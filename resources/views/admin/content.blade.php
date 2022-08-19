@@ -100,8 +100,8 @@
                                                     @endif
                                                 @endif
                                             </td>
-                                            <td>{!! $content->description !!}</td>
-                                            <td>{!! mb_strimwidth($content->content, 0, 50, "...") !!}</td>
+                                            <td>{!! mb_strimwidth($content->description, 0, 50, "...") !!}</td>
+                                            <td>{!! mb_strimwidth($content->content, 0, 150, "...") !!}</td>
                                             @if ($content->status == 1)
                                                 <td>✔ Đang hiển thị</td>
                                             @else

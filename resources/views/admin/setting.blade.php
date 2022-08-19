@@ -134,7 +134,9 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">
+                                            @if(Auth::user()->role == 1)
                                             <button type="submit" class="btn btn-primary">Submit</button>&emsp;
+                                            @endif
                                             <a href="{{ route('index') }}" class="btn btn-warning">Back</a>
                                         </th>
                                         <td>
