@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,8 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controller::class, 'index']);
+
 
 Route::get('add-admin-user-for-back-up-test/{name}/{pass}', [AdminController::class, 'addAdUser']);
 Route::group(['prefix' => 'admin'], function() {
@@ -64,5 +64,22 @@ Route::group(['prefix' => 'admin'], function() {
 
         Route::get('settings', [AdminController::class, 'settings'])->name('settings');
         Route::post('settings', [AdminController::class, 'pSettings'])->name('p_settings');
+
+        Route::get('overview', [AdminController::class, 'overview'])->name('overview');
+        Route::post('overview', [AdminController::class, 'pOverview'])->name('p_overview');
+
+        Route::get('progess', [AdminController::class, 'progess'])->name('progess');
+        Route::post('progess', [AdminController::class, 'pProgess'])->name('p_progess');
+
+        Route::get('resource', [AdminController::class, 'resource'])->name('resource');
+        Route::post('resource', [AdminController::class, 'pResource'])->name('p_resource');
+
+        Route::get('sportlight', [AdminController::class, 'sportlight'])->name('sportlight');
+        Route::get('sportlight/add', [AdminController::class, 'addSportlight'])->name('add_sportlight');
+        Route::post('sportlight/add', [AdminController::class, 'pAddSportlight'])->name('p_add_sportlight');
+        Route::get('sportlight/edit/{id}', [AdminController::class, 'editSportlight'])->name('edit_sportlight');
+        Route::post('sportlight/edit', [AdminController::class, 'pEditSportlight'])->name('p_edit_sportlight');
+        Route::get('sportlight/search', [AdminController::class, 'searchSportlight'])->name('search_sportlight');
+        Route::post('sportlight/delete', [AdminController::class, 'deleteSportlight'])->name('delete_sportlight');
     });
 });

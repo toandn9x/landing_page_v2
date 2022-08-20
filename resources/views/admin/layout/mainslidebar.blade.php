@@ -35,10 +35,41 @@
                 <li class="nav-item">
                     <a href="{{ route('users') }}" class="nav-link">
                         <i class="fas fa-user"></i>
-                        <p>QL tài khoản</p>
+                        <p>User manager</p>
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{ route('settings') }}" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <p>Web setting</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('overview') }}" class="nav-link">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>Overview</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('progess') }}" class="nav-link">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>Progress & Result</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('index') }}" class="nav-link">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>Implementation resources</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('sportlight') }}" class="nav-link">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>Spotlights</p>
+                    </a>
+                </li>
+                
+                <!-- <li class="nav-item">
                     <a href="{{ route('menus') }}" class="nav-link">
                         <i class="fas fa-list"></i>
                         <p>QL Danh Mục</p>
@@ -49,19 +80,19 @@
                         <i class="fas fa-clipboard-list"></i>
                         <p>QL Nội Dung</p>
                     </a>
-                </li>
+                </li> -->
 {{--                <li class="nav-item">--}}
 {{--                    <a href="{{ route('news') }}" class="nav-link">--}}
 {{--                        <i class="fas fa-clipboard-list"></i>--}}
 {{--                        <p>QL tin tức</p>--}}
 {{--                    </a>--}}
 {{--                </li>--}}
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="{{ route('settings') }}" class="nav-link">
                         <i class="fas fa-cogs"></i>
                         <p>Web setting</p>
                     </a>
-                </li>
+                </li> -->
 
             </ul>
         </nav>
