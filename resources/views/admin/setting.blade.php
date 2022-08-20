@@ -35,7 +35,7 @@
                                 @csrf
                                 <table class="table">
                                     <tr>
-                                        <th scope="row">Địa Chỉ</th>
+                                        <th scope="row">Address</th>
                                         <td>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id=""
@@ -55,7 +55,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Số điện thoại</th>
+                                        <th scope="row">Phone</th>
                                         <td>
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id=""
@@ -81,21 +81,10 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                            <p><b>Logo hiện tại: </b></p>
-                                            @if(isset($setting->logo_img))
-                                                @php
-                                                    $type = explode(".",$setting->logo_img);
-                                                @endphp
-                                                @if(end($type) == "mp4")
-                                                    <video width="100" controls>
-                                                        <source src="images/{{ $setting->logo_img }}" type="video/mp4">
-                                                    </video>
-                                                @else
-                                                    <a href="images/{{ $setting->logo_img }}"><img
+                                            <p><b>Logo: </b></p>
+                                            <a href="images/{{ $setting->logo_img }}"><img
                                                             src="images/{{ $setting->logo_img }}"
                                                             style="width: 100px; cursor: pointer"></a>
-                                                @endif
-                                            @endif
                                         </td>
                                     </tr>
                                     <tr>
@@ -115,20 +104,11 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                            <p><b>Background hiện tại: </b></p>
+                                            <p><b>Background: </b></p>
                                             @if(isset($setting->bg_img))
-                                                @php
-                                                    $type = explode(".",$setting->bg_img);
-                                                @endphp
-                                                @if(end($type) == "mp4")
-                                                    <video width="100" controls>
-                                                        <source src="images/{{ $setting->bg_img }}" type="video/mp4">
-                                                    </video>
-                                                @else
-                                                    <a href="images/{{ $setting->bg_img }}"><img
+                                                <a href="images/{{ $setting->bg_img }}"><img
                                                             src="images/{{ $setting->bg_img }}"
                                                             style="width: 100px; cursor: pointer"></a>
-                                                @endif
                                             @endif
                                         </td>
                                     </tr>
@@ -155,6 +135,6 @@
 @stop
 @section('script')
     <script>
-        $("ul li:nth-child(5) > a").addClass("active");
+        $("ul li:nth-child(3) > a").addClass("active");
     </script>
 @stop

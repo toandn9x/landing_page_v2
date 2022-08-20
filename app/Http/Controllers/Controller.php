@@ -16,6 +16,7 @@ class Controller extends BaseController
         $overview = DB::table('overview')->first();
         $progess = DB::table('progess')->first();
         $sportlight = DB::table('sportlight')->take(6)->orderBy("id", "DESC")->get();
-        return view('overview',['overview' => $overview, 'progess' => $progess, 'sportlight' => $sportlight]); 
+        $setting = DB::table('settings')->first();
+        return view('overview',['overview' => $overview, 'progess' => $progess, 'sportlight' => $sportlight, 'setting' => $setting]); 
     }
 }

@@ -77,7 +77,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
 
-        <a href="index.html" class="logo mx-auto d-block"><img src="assets/img/logo.png" alt=""></a>
+        <a href="index.html" class="logo mx-auto d-block"><img src="images/{{ $setting->logo_img }}" alt=""></a>
         <nav id="navbar" class="navbar order-last order-lg-0 m-auto b-block">
             <ul>
                 <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
@@ -248,9 +248,7 @@
                                         <div class="row">
                                             <div class="col-lg-12 mb-10">
                                                 <!-- <img class="img-full" src="assets/img/sch.png" /> -->
-                                                <iframe class="img-full"
-                                                    src="{{ $overview->link }}">
-                                                </iframe>
+                                                <iframe class="img-full" src="{{ $overview->link }}" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                             </div>
                                             <div class="pt-5 d-flex">
                                                 <div class="col-lg-6" data-aos="fade-right">
@@ -474,7 +472,7 @@
                     </div>
 
                     <div class="col-lg-3 col-md-6 footer-links d-flex footer-img">
-                        <img src="assets/img/logo.png" />
+                        <img src="images/{{ $setting->logo_img }}" />
                     </div>
 
                     <div class="col-lg-5 col-md-6 footer-links m-auto">
