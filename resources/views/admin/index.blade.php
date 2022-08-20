@@ -54,14 +54,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{ $menus }}</h3>
+                <h3>1</h3>
 
-                <p>category</p>
+                <p>Overview</p>
               </div>
               <div class="icon">
                 <i class="ion ion-folder"></i>
               </div>
-              <a href="{{ route('menus') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('overview') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -76,7 +76,7 @@
               <div class="icon">
                 <i class="ion ion-document"></i>
               </div>
-              <a href="{{ route('contents') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{ route('sportlight') }}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
 

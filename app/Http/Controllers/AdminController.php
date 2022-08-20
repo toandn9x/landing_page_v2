@@ -62,7 +62,7 @@ class AdminController extends Controller
     {
         $users = DB::table('users')->count();
         $menus = DB::table('menus')->count();
-        $contents = DB::table('contents')->count();
+        $contents = DB::table('sportlight')->count();
         $news = DB::table('news')->count();
         return view('admin.index', ['users' => $users, 'menus' => $menus, 'contents' => $contents, 'news' => $news]);
     }

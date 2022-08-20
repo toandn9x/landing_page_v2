@@ -15,7 +15,7 @@
                 <img src="admin_lib/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="{{ route('users') }}" class="d-block">hello: <b>{{ Auth::user()->name }}</b></a>
+                <a href="{{ route('edit_user',  Auth::user()->id) }}" class="d-block">hello: <b>{{ Auth::user()->name }}</b></a>
             </div>
         </div>
 
