@@ -260,7 +260,7 @@ $(function() {
       </div>
       <div id="pma_navigation_tree" class="list_container synced highlight autoexpand">
 
-  <div class="pma_quick_warp"><div class="drop_list"><button title="Các bảng mới dùng" class="drop_button btn">Mới dùng</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=progess">`lading_v2`.`progess`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=sportlight">`lading_v2`.`sportlight`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=settings">`lading_v2`.`settings`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=users">`lading_v2`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=landing_page&table=contents">`landing_page`.`contents`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=landing_page&table=news">`landing_page`.`news`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=landing_page&table=users">`landing_page`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ql_sanbong&table=users">`ql_sanbong`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ql_sanbong&table=user_roles">`ql_sanbong`.`user_roles`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ql_sanbong&table=visitors">`ql_sanbong`.`visitors`</a></li></ul></div><div class="drop_list"><button title="Bảng ưa dùng" class="drop_button btn">Ưa dùng</button><ul id="pma_favorite_list"><li class="warp_link">Không có bảng ưa dùng nào.</li></ul></div><div class="clearfloat"></div></div>
+  <div class="pma_quick_warp"><div class="drop_list"><button title="Các bảng mới dùng" class="drop_button btn">Mới dùng</button><ul id="pma_recent_list"><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=sportlight">`lading_v2`.`sportlight`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=settings">`lading_v2`.`settings`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=progess">`lading_v2`.`progess`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=lading_v2&table=users">`lading_v2`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=landing_page&table=contents">`landing_page`.`contents`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=landing_page&table=news">`landing_page`.`news`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=landing_page&table=users">`landing_page`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ql_sanbong&table=users">`ql_sanbong`.`users`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ql_sanbong&table=user_roles">`ql_sanbong`.`user_roles`</a></li><li class="warp_link"><a href="index.php?route=/table/recent-favorite&db=ql_sanbong&table=visitors">`ql_sanbong`.`visitors`</a></li></ul></div><div class="drop_list"><button title="Bảng ưa dùng" class="drop_button btn">Ưa dùng</button><ul id="pma_favorite_list"><li class="warp_link">Không có bảng ưa dùng nào.</li></ul></div><div class="clearfloat"></div></div>
 
 <div class="clearfloat"></div>
 
@@ -1130,6 +1130,82 @@ $.extend(defaultValues, {
                     </span>
             </div>
                             <span class="query">SELECT * FROM `progess`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="lading_v2" targettable="settings">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Co lại
+                    </span>
+                            <span class="action expand">
+            Mở rộng
+                    </span>
+                            <span class="action requery">
+            Truy vấn lại
+                    </span>
+                            <span class="action edit">
+            Sửa
+                    </span>
+                            <span class="action explain">
+            Giải thích
+                    </span>
+                            <span class="action profiling">
+            Hồ sơ
+                    </span>
+                            <span class="action bookmark">
+            Đánh dấu
+                    </span>
+                            <span class="text failed">
+            Truy vấn bị lỗi
+                    </span>
+                            <span class="text targetdb">
+            Cơ sở dữ liệu
+                            : <span>lading_v2</span>
+                    </span>
+                            <span class="text query_time">
+            Thời gian truy vấn
+                            : <span>Lưu phiên hiện tại</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `settings`</span>
+                        </div>
+                                            <div class="message history collapsed hide select"
+                            targetdb="lading_v2" targettable="sportlight">
+                            <div class="action_content">
+                    <span class="action collapse">
+            Co lại
+                    </span>
+                            <span class="action expand">
+            Mở rộng
+                    </span>
+                            <span class="action requery">
+            Truy vấn lại
+                    </span>
+                            <span class="action edit">
+            Sửa
+                    </span>
+                            <span class="action explain">
+            Giải thích
+                    </span>
+                            <span class="action profiling">
+            Hồ sơ
+                    </span>
+                            <span class="action bookmark">
+            Đánh dấu
+                    </span>
+                            <span class="text failed">
+            Truy vấn bị lỗi
+                    </span>
+                            <span class="text targetdb">
+            Cơ sở dữ liệu
+                            : <span>lading_v2</span>
+                    </span>
+                            <span class="text query_time">
+            Thời gian truy vấn
+                            : <span>Lưu phiên hiện tại</span>
+                    </span>
+            </div>
+                            <span class="query">SELECT * FROM `sportlight`</span>
                         </div>
                                                 </div><!-- console_message_container -->
             <div class="query_input">
