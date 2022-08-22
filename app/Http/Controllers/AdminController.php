@@ -150,8 +150,8 @@ class AdminController extends Controller
         $us = $users->get();
         if ($us) {
             foreach ($us as $key => $user) {
-                $user->status == 1 ? $user->status = "✔ Đang hoạt động" : $user->status = "<span style='color:red'>✘ Huỷ kích hoạt</span>";
-                $user->role == 1 ? $user->role = "<span style='color:red'>Quản trị viên</span>" : $user->role = "Người dùng";
+                $user->status == 1 ? $user->status = "✔ Active" : $user->status = "<span style='color:red'>✘ Inactive</span>";
+                $user->role == 1 ? $user->role = "<span style='color:red'>Admin</span>" : $user->role = "Viewer";
                 $output .= '<tr>
                 <th scope="row"><input class="form-check-input" type="checkbox" value="' . $user->id . '" id="' . $user->id . '"></th>
                 <th scope="row">' . ($key + 1) . '</th>
@@ -998,9 +998,9 @@ class AdminController extends Controller
             $sportlight->img = $newname;
         }
         if (!$sportlight->save()) {
-            return redirect()->back()->with('err', 'Có lỗi, vui lòng thử lại');
+            return redirect()->back()->with('err', 'add new error');
         }
-        return redirect()->route('sportlight')->with('success', 'Thêm nội dung thành công!');
+        return redirect()->route('sportlight')->with('success', 'add news success');
     }
 
     public function editSportlight($id)
@@ -1037,9 +1037,9 @@ class AdminController extends Controller
         }
         if ($request->delete == 1) $sportlight->img = NULL;
         if (!$sportlight->save()) {
-            return redirect()->back()->with('err', 'Có lỗi, vui lòng thử lại');
+            return redirect()->back()->with('err', 'edit new error!');
         }
-        return redirect()->back()->with('success', 'Cập nhật nội dung thành công!');
+        return redirect()->route('sportlight')->with('success', 'edit news success');
 
     }
 

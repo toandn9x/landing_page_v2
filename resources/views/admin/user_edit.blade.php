@@ -1,5 +1,5 @@
 @extends('admin.layout.app')
-@section('title', 'Sửa tài khoản')
+@section('title', 'User edit')
 @section('content_admin')
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Sửa tài khoản</h1>
+            <h1>User edit</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -42,7 +42,7 @@
                 @csrf
                 <table class="table">
                     <tr>
-                      <th scope="row">Địa chỉ email(<span style="color: red">*</span>)</th>
+                      <th scope="row">Email(<span style="color: red">*</span>)</th>
                       <td>
                         <div class="form-group">
                           <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required name="email" value="{{ $user->email }}">
@@ -50,7 +50,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Mật khẩu(<span style="color: red">*</span>)</th>
+                      <th scope="row">Password(<span style="color: red">*</span>)</th>
                       <td>
                         <div class="form-group">
                           <input type="password" class="form-control" id="pass" placeholder="Enter password" name="password" minlength="6" value="{{ $user->password }}">
@@ -58,7 +58,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Tên đăng nhập(<span style="color: red">*</span>)</th>
+                      <th scope="row">User name(<span style="color: red">*</span>)</th>
                       <td>
                         <div class="form-group">
                           <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required value="{{ $user->name }}">
@@ -66,7 +66,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Loại tài khoản</th>
+                      <th scope="row">Role</th>
                       <td>
                         <div class="form-group">
                           <select class="form-control" id="" name="role">
@@ -74,17 +74,17 @@
                             @if($user->role == 0)
                               selected
                             @endif
-                            >Người dùng</option>
+                            >Viewer</option>
                             <option value="1"
                             @if($user->role == 1)
                               selected
                             @endif
-                            >Quản trị viên</option>
+                            >Admin</option>
                         </select>
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Trạng thái</th>
+                      <th scope="row">Status</th>
                       <td>
                         <div class="form-group">
                           <select class="form-control" id="" name="status">
@@ -92,12 +92,12 @@
                             @if($user->status == 1)
                               selected
                             @endif
-                            >✔ Đang hoạt động</option>
+                            >✔ Active</option>
                             <option value="0"
                             @if($user->status == 0)
                               selected
                             @endif
-                            >✘ Huỷ kích hoạt</option>
+                            >✘ Inactive</option>
                         </select>
                       </td>
                     </tr>

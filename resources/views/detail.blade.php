@@ -50,7 +50,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container header-wrapper">
-            <a class="logo mx-auto d-block" href="./index.html"><img src="assets/img/logo.png" alt=""></a>
+            <a class="logo mx-auto d-block" href="{{ route('indexx') }}"><img src="images/{{ $setting->logo_img }}" alt=""></a>
             <nav id="navbar" class="navbar order-last order-lg-0 m-auto b-block">
                 <ul>
                     <li class="dropdown"><a href="#"><span>About Us</span></a>
@@ -126,12 +126,13 @@
                         {!! $detail->content !!}
                     </p>
                 </div>
+                <br><br><br><hr>
                     <h2 class="read-more freight-title">read other news</h2>
                 </div>
                 <div class="col-lg-12 row m-auto px-5">
                     @foreach($other as $ot)
                         <div class="col-lg-3 suggestion-bottom">
-                            <img src="assets/img/{{ $ot->img }}" />
+                            <a href="{{ route('detail', $ot->id) }}"><img src="assets/img/{{ $ot->img }}" /></a>
                             <p>{{ $ot->description }}</p>
                             <span class="spl-on-time"> <i class="fa-solid fa-clock"></i>
                                 {{ $ot->created_at }}</span>

@@ -69,7 +69,7 @@
                                         <th scope="col">status</th>
                                         <th scope="col">created_at</th>
                                         <th scope="col">updated_at</th>
-                                        <th scope="col">manipulation</th>
+                                        <th scope="col">action</th>
                                     </tr>
                                     </thead>
                                     <tbody id="content_table">
@@ -84,8 +84,8 @@
                                                     <a href="assets/img/{{ $content->img }}"><img src="assets/img/{{ $content->img }}" style="width: 100px; cursor: pointer"></a>
                                                 @endif
                                             </td>
-                                            <td>{!! mb_strimwidth($content->description, 0, 50, "...") !!}</td>
-                                            <td>{!! mb_strimwidth($content->content, 0, 150, "...") !!}</td>
+                                            <td>{{ mb_strimwidth($content->description, 0, 50, "...") }}</td>
+                                            <td>{{ mb_strimwidth($content->content, 0, 150, "...") }}</td>
                                             @if ($content->status == 1)
                                                 <td>✔ Active</td>
                                             @else

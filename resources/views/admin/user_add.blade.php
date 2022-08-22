@@ -1,5 +1,5 @@
 @extends('admin.layout.app')
-@section('title', 'Thêm tài khoản')
+@section('title', 'User add')
 @section('content_admin')
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Thêm tài khoản</h1>
+            <h1>User add</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -42,7 +42,7 @@
                 @csrf
                 <table class="table">
                     <tr>
-                      <th scope="row">Địa chỉ email(<span style="color: red">*</span>)</th>
+                      <th scope="row">Email(<span style="color: red">*</span>)</th>
                       <td>
                         <div class="form-group">
                           <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required name="email">
@@ -50,7 +50,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Mật khẩu(<span style="color: red">*</span>)</th>
+                      <th scope="row">Password(<span style="color: red">*</span>)</th>
                       <td>
                         <div class="form-group">
                           <input type="password" class="form-control" id="pass" placeholder="Enter password" name="password" minlength="6">
@@ -58,7 +58,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Nhập lại mật khẩu(<span style="color: red">*</span>)</th>
+                      <th scope="row">Re-password(<span style="color: red">*</span>)</th>
                       <td>
                         <div class="form-group">
                           <input type="password" class="form-control" id="repass" placeholder="Confirm password" name="repass" minlength="6">
@@ -66,7 +66,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Tên tài khoản(<span style="color: red">*</span>)</th>
+                      <th scope="row">User name(<span style="color: red">*</span>)</th>
                       <td>
                         <div class="form-group">
                           <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required >
@@ -74,12 +74,12 @@
                       </td>
                     </tr>
                     <tr>
-                      <th scope="row">Loại tài khoản</th>
+                      <th scope="row">Role</th>
                       <td>
                         <div class="form-group">
                           <select class="form-control" id="" name="role">
-                            <option value="0">Người dùng</option>
-                            <option value="1">Tài khoản admin</option>
+                            <option value="0">Viewer</option>
+                            <option value="1">Admin</option>
                         </select>
                       </td>
                     </tr>

@@ -1,5 +1,5 @@
 @extends('admin.layout.app')
-@section('title', 'QL tài khoản')
+@section('title', 'User manager')
 @section('content_admin')
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>QL Tài Khoản</h1>
+                        <h1>User manager</h1>
                     </div>
                 </div>
             </div><!-- /.container-fluid -->
@@ -22,9 +22,9 @@
                             <div class="card-header">
                                 <div class="col-sm-12">
                                     @if(Auth::user()->role == 1)
-                                    <a href="{{ route('add_user') }}" class="btn btn-info" style="margin-left: 15px">Thêm</a> |
+                                    <a href="{{ route('add_user') }}" class="btn btn-info" style="margin-left: 15px">Add</a> |
                                     <!-- <a href="#" class="btn btn-warning">Xuất excel</a> | -->
-                                    <a href="javascript:void(0)" class="btn btn-danger" style="" id="user_delete">Xóa</a>
+                                    <a href="javascript:void(0)" class="btn btn-danger" style="" id="user_delete">Edit</a>
                                     @endif
                                     <!-- SEARCH FORM -->
                                     <form class="form-inline ml-3 float-right" style="padding-top: 10px; padding-left: 0px!important">
@@ -39,17 +39,17 @@
                                         </div>
                                         <div class="input-group input-group-sm">
                                             <select class="form-control" id="user_status">
-                                                <option value="">--Trạng thái--</option>
-                                                <option value="1" style="font-weight: bold!important">Đang hoạt động
+                                                <option value="">--Status--</option>
+                                                <option value="1" style="font-weight: bold!important">Active
                                                 </option>
-                                                <option value="0" style="font-weight: bold!important">Huỷ kích hoạt</option>
+                                                <option value="0" style="font-weight: bold!important">Inactive</option>
                                             </select>
                                         </div>
                                         <div class="input-group input-group-sm">
                                             <select class="form-control" id="user_level">
-                                                <option value="">--Quyền--</option>
-                                                <option value="0" style="font-weight: bold!important">Người dùng</option>
-                                                <option value="1" style="font-weight: bold!important">Quản trị</option>
+                                                <option value="">--role--</option>
+                                                <option value="0" style="font-weight: bold!important">Viewer</option>
+                                                <option value="1" style="font-weight: bold!important">Admin</option>
                                             </select>
                                         </div>
                                     </form>
@@ -62,12 +62,12 @@
                                     <tr>
                                         <th scope="col"></th>
                                         <th scope="col">STT</th>
-                                        <th scope="col">Tên</th>
+                                        <th scope="col">User name</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">Trạng thái</th>
-                                        <th scope="col">Quyền</th>
-                                        <th scope="col">Ngày tạo</th>
-                                        <th scope="col">Thao tác</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Created_at</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                     </thead>
                                     <tbody id="user_table">
@@ -79,14 +79,14 @@
                                             <td>{{ $user->name }}</td>
                                             <td>{{ $user->email }}</td>
                                             @if ($user->status == 1)
-                                                <td>✔ Đang hoạt động</td>
+                                                <td>✔ Active</td>
                                             @else
-                                                <td><span style="color:red">✘ Huỷ kích hoạt</span></td>
+                                                <td><span style="color:red">✘ Inactive</span></td>
                                             @endif
                                             @if ($user->role == 1)
-                                                <td><span style="color:red">Quản trị viên</span></td>
+                                                <td><span style="color:red">Admin</span></td>
                                             @else
-                                                <td>Người dùng</td>
+                                                <td>Viewer</td>
                                             @endif
                                             <td>{{ $user->created_at }}</td>
                                             <td>
