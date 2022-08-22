@@ -104,6 +104,10 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th style="color: #00bb00">VietNam:</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
                                         <th scope="row">title3</th>
                                         <td>
                                             <div class="form-group">
@@ -115,7 +119,7 @@
                                         <th scope="row">content3</th>
                                         <td>
                                             <div class="form-group">
-                                                <textarea class="textarea" rows="5" name="content3">{{ isset($progess->content3) ? $progess->content3 : '' }}</textarea>
+                                                <textarea class="form-control" rows="2" name="content3">{{ isset($progess->content3) ? $progess->content3 : '' }}</textarea>
                                             </div>
                                         </td>
                                     </tr>
@@ -184,7 +188,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="images/"><img src="assets/img/{{ isset($progess->img5) ? $progess->img5 : '' }}" style="width: 100px; cursor: pointer"></a>
+                                            <a href="assets/img/{{ isset($progess->img5) ? $progess->img5 : '' }}"><img src="assets/img/{{ isset($progess->img5) ? $progess->img5 : '' }}" style="width: 100px; cursor: pointer"></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -206,7 +210,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                    	<tr>
+                                    <tr>
                                         <th scope="row">img7</th>
                                         <td>
                                             <div class="form-group">
@@ -224,6 +228,110 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th style="color: #00bb00">Laos:</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">title8</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="title8" placeholder="Enter text" name="title8" value="{{ isset($progess->title8) ?  $progess->title8 : ''}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">content8</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="2" name="content8">{{ isset($progess->content8) ? $progess->content8 : '' }}</textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">img8</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="exampleInputFile" name = "img8">
+                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text" id="">Upload</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="images/"><img src="assets/img/{{ isset($progess->img8) ? $progess->img8 : '' }}" style="width: 100px; cursor: pointer"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">title9</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="title9" placeholder="Enter text" name="title9" value="{{ isset($progess->title9) ?  $progess->title9 : ''}}">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">img9</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="exampleInputFile" name = "img9">
+                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text" id="">Upload</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="images/"><img src="assets/img/{{ isset($progess->img9) ? $progess->img9 : '' }}" style="width: 100px; cursor: pointer"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <th scope="row">content9</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="5" name="content9">{{ isset($progess->content9) ? $progess->content9 : '' }}</textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">img10</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="exampleInputFile" name = "img10">
+                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text" id="">Upload</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="images/"><img src="assets/img/{{ isset($progess->img10) ? $progess->img10 : '' }}" style="width: 100px; cursor: pointer"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">img11</th>
+                                        <td>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="exampleInputFile" name = "img11">
+                                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                    </div>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text" id="">Upload</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="images/"><img src="assets/img/{{ isset($progess->img11) ? $progess->img11 : '' }}" style="width: 100px; cursor: pointer"></a>
+                                        </td>
+                                    </tr>
                                     <tr>
                                     	@if(Auth::user()->role == 1)
                                         <td><button type="submit" class="btn btn-primary">Submit</button></td>

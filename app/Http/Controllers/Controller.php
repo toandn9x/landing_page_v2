@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sportlight;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -15,8 +16,19 @@ class Controller extends BaseController
     public function index() {
         $overview = DB::table('overview')->first();
         $progess = DB::table('progess')->first();
-        $sportlight = DB::table('sportlight')->take(6)->orderBy("id", "DESC")->get();
+        $sportlight = DB::table('sportlight')
+            ->where('status', 1)
+            ->take(3)->orderBy("id", "DESC")->get();
         $setting = DB::table('settings')->first();
-        return view('overview',['overview' => $overview, 'progess' => $progess, 'sportlight' => $sportlight, 'setting' => $setting]); 
+        return view('index',['overview' => $overview, 'progess' => $progess, 'sportlight' => $sportlight, 'setting' => $setting]);
+    }
+
+    public function detail($id) {
+        $detail = Sportlight::find($id);
+        $other = DB::table('sportlight')
+            ->where('status', 1)
+            ->where('id', '!=', $id)
+            ->take(3)->orderBy("id", "DESC")->get();
+        return view('detail', ['detail' => $detail, 'other' => $other]);
     }
 }

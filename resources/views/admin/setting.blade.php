@@ -88,7 +88,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">Background</th>
+                                        <th scope="row">Footer img</th>
                                         <td>
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -104,7 +104,7 @@
                                                 </div>
                                             </div>
                                             <hr>
-                                            <p><b>Background: </b></p>
+                                            <p><b>Footer img: </b></p>
                                             @if(isset($setting->bg_img))
                                                 <a href="images/{{ $setting->bg_img }}"><img
                                                             src="images/{{ $setting->bg_img }}"
