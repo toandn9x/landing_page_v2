@@ -133,7 +133,7 @@
                     @foreach($other as $ot)
                         <div class="col-lg-3 suggestion-bottom">
                             <a href="{{ route('detail', $ot->id) }}"><img src="assets/img/{{ $ot->img }}" /></a>
-                            <p>{{ $ot->description }}</p>
+                            <p><a href="{{ route('detail', $ot->id) }}">{{ $ot->description }}</a></p>
                             <span class="spl-on-time"> <i class="fa-solid fa-clock"></i>
                                 {{ $ot->created_at }}</span>
                         </div>

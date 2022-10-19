@@ -57,7 +57,7 @@
         <div class="container header-wrapper">
             <a class="logo mx-auto d-block" href="{{ route('indexx') }}"><img src="images/{{ $setting->logo_img }}" alt=""></a>
             <nav id="navbar" class="navbar order-last order-lg-0 m-auto b-block">
-                <ul>
+                <ul class="nav-right">
                     <li class="dropdown"><a href="#"><span>About Us</span></a>
                         <ul>
                             <li><a href="https://www.aliveandthrive.org/en/what-we-do" target="_blank">What we do</a>
@@ -73,7 +73,7 @@
                     <li class="ml-10px"><a class="nav-link scrollto"
                             href="https://www.aliveandthrive.org/en/news">News</a>
                     </li>
-                    <li class="dropdown"><a href="#"><span class="d2">Tool & Resource</span></a>
+                    <li class="dropdown"><a href="#"><span class="d2">Tools & Resources</span></a>
                         <ul>
                             <li><a href="https://www.iycfhub.org/" target="_blank">IYCF E-LEARNING COURSE</a></li>
                             <li><a href="https://www.aliveandthrive.org/en/the-new-cost-of-not-breastfeeding-tool"
@@ -98,12 +98,13 @@
                     <li><a class="nav-link scrollto"
                             href="https://www.aliveandthrive.org/en/research-and-learning">Research & Learning</a></li>
                 </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
                 <ul class="nav-left">
                     <li class="active">ENG</li>
                     <li>FR</li>
                     <li><i class="fa-solid fa-magnifying-glass"></i></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+
             </nav><!-- .navbar -->
         </div>
 
@@ -118,7 +119,7 @@
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-12 row container" id="banner">
-                        <div class="col-lg-6 banner-left text-center">
+                        <!-- <div class="col-lg-6 banner-left text-center">
                             <img src="assets/img/frame1.png" />
                             <div class="slogan">
                                 <h3 class="freight-title">Centers of excellence
@@ -129,6 +130,9 @@
                         <div class="col-lg-6 banner-right">
                             <img class="img-full" src="assets/img/banner.png" />
 
+                        </div> -->
+                        <div class="delay-logo">
+                            <img src="./assets/img/logo2.png" />
                         </div>
 
                     </div>
@@ -159,14 +163,14 @@
                     <div class="col-lg-12 px-0">
                         <div class="tab-content">
                             <div class="tab-pane active show" id="tab-1">
-                                <h3 class="freight-title">{{ $overview->title1 }}</h3>
+                                <h2 class="freight-title">{{ $overview->title1 }}</h2>
                                 <div class="tab-pane-content">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-8 col-12">
                                         <p>{!! $overview->content1 !!}
                                         </p>
                                     </div>
-                                    <div class="col-lg-4 px-10 img-on-top d-flex">
-                                        <img src="assets/img/{{ $overview->img5 }}" alt="" class="img-fluid">
+                                    <div class="col-lg-4 px-10 img-on-top d-flex col-12">
+                                        <img src="assets/img/frame1.png" alt="" class="img-fluid">
                                     </div>
                                 </div>
                                 <!-- ======= Featured Services Section ======= -->
@@ -178,7 +182,7 @@
                                             </h2>
                                             <p>{!! $overview->content2 !!}</p>
                                         </div>
-                                        <div class="row container">
+                                        <div class="row container mx-0">
                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
                                                 <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                                                     <img class="excellent-img" src="assets/img/{{ $overview->img1 }}" />
@@ -211,21 +215,24 @@
                                         <div class="row">
                                             <div class="col-lg-12 mb-10">
                                                 <!-- <img class="img-full" src="assets/img/sch.png" /> -->
-                                                <iframe class="img-full" src="{{ $overview->link }}" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                                <iframe class="img-full"
+                                                    src="{{ $overview->link }}?autoplay=1&mute=1">
                                                 </iframe>
                                             </div>
                                             <div class="pt-5 d-flex">
-                                                <div class="col-lg-6 question-wrapper" data-aos="fade-right">
+                                                <div class="col-lg-6 question-wrapper col-12" data-aos="fade-right">
                                                     <img src="assets/img/{{ $overview->img4 }}" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="col-lg-6 pt-lg-0 content p-5 qs-content"
+                                                <div class="col-lg-6 pt-lg-0 content p-5 qs-content col-12"
                                                     data-aos="fade-left">
                                                     <h1 class="pt-5 freight-title">{{ $overview->title3 }}</h1>
                                                     <p>
                                                         {!! $overview->content3 !!}
                                                     </p>
-                                                    <button class="btn coe-btn">Detail <i
-                                                            class="fa-solid fa-chevron-right "></i></button>
+                                                    <button class="btn coe-btn"><a
+                                                            href="https://www.aliveandthrive.org/sites/default/files/coe-faq_final.pdf"
+                                                            target="_blank">Detail <i
+                                                                class="fa-solid fa-chevron-right "></i></a></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -235,15 +242,24 @@
 
                             </div>
                             <div class="tab-pane" id="tab-2">
-                                <div class="col-lg-12 row progress-result-wrapper m-auto">
+                                <div class="col-lg-12 col-12 progress-banner">
+                                    <img src="assets/img/{{ $progess->img1 }}" />
+                                    <p>{!! $progess->content1 !!}
+                                    </p>
+                                </div>
+                                <!-- <div class="col-lg-12 row progress-result-wrapper m-auto">
                                     <div class="col-lg-6 img-left">
-                                        <img src="assets/img/{{ $progess->img1 }}" />
+                                        <img src="assets/img/est.jpg" />
                                     </div>
                                     <div class="col-lg-6 content-right">
-                                        <p>{{ $progess->title1 }}</p>
-                                        <h2>{!! $progess->content1 !!}</h2>
+                                        <h2>By estimation</h2>
+                                        <h2>One in five babies in
+                                        </h2>
+                                        <h2>
+                                            Viet Nam is born in a </h2>
+                                        <h2>Center of Excellence for Breastfeeding.</h2>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-lg-12 area-wrapper">
                                     <div class="col-lg-12 m-auto">
                                         <h4 class="text-center country-zone freight-title">{{ $progess->title2 }}
@@ -256,7 +272,7 @@
                                         <div class="col-lg-4">
                                             <nav class="navbar order-last order-lg-0 area-selector">
                                                 <ul class="country-list country-flag">
-                                                    <li class="dropdown"><a href="#"><span>Southeast Asia</span> <i
+                                                    <li class="dropdown"><a><span>Southeast Asia</span> <i
                                                                 class="bi bi-chevron-down"></i></a>
                                                         <ul>
                                                             <li><button class="accordion-button" type="button"
@@ -286,7 +302,7 @@
                                                                     data-bs-target="#collapseFour" aria-expanded="false"
                                                                     aria-controls="collapseFour"><img class="mx-2"
                                                                         src="assets/img/cam.png" /><a
-                                                                        href=" #">Campuchia</a></button>
+                                                                        href=" #">Cambodia</a></button>
                                                             </li>
                                                         </ul>
                                                     </li>
@@ -296,7 +312,7 @@
                                         <div class="col-lg-4">
                                             <nav class="navbar order-last order-lg-0 area-selector">
                                                 <ul class="country-list asia">
-                                                    <li class="dropdown"><a href="#"><span>Others</span> <i
+                                                    <li class="dropdown"><a><span>Others</span> <i
                                                                 class="bi bi-chevron-down"></i></a>
                                                         <ul>
                                                             <li><a href="#">West and Central Africa
@@ -321,7 +337,21 @@
                                                         </div>
 
                                                     </div>
-                                                    <div class="col-lg-12 row list-img m-auto">
+                                                    <div class="col-lg-12 vn-info col-12">
+                                                        <div class="vn-info-title m-auto text-center">
+                                                            <h2 class="freight-title">List of provinces
+                                                                enrolled in the Center of Excellence
+                                                                for Breastfeading initiative in VietNam</h2>
+                                                        </div>
+                                                        <img src="./assets/img/vni.png" />
+                                                        <div class="vn-info-title m-auto text-center">
+                                                            <p>Disclaimer: The map does not
+                                                                reflect a position by agengencies on the legal status of
+                                                                any country or area or the delimitation of any frontiers
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 row list-img m-auto mt-5">
                                                         <div class="col-lg-7 row">
                                                             <div class="col-left col-lg-6">
                                                                 <div class="col-lg-12">
@@ -377,24 +407,24 @@
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                 <div class="accordion-body">
                                                     <div class="col-lg-12 m-auto desc-service mt-5">
-                                                        <img src="assets/img/{{ $progess->img8 }}" class="d-block w-100" alt="...">
+                                                        <img src="assets/img/{{ isset($progess->img8) ? $progess->img8 : '' }}" class="d-block w-100" alt="...">
                                                         <div class="content-service">
-                                                            <h2 class="freight-title">{{ $progess->title8 }}</h2>
-                                                            <p>{{ $progess->content8 }}</p>
+                                                            <h2 class="freight-title">{{ isset($progess->title8) ? $progess->title8 : '' }}</h2>
+                                                            <p>{{ isset($progess->content8) ? $progess->content8 : '' }}</p>
                                                         </div>
 
                                                     </div>
                                                     <div class="col-lg-10 row list-img m-auto">
                                                         <div class="col-lg-4 row">
                                                             <div class="col-lg-12 laos-img">
-                                                                <img src="assets/img/{{ $progess->img9 }}" />
+                                                                <img src="assets/img/{{ isset($progess->img9) ? $progess->img9 : '' }}" />
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-8 center-list-wrapper p-10">
-                                                            <h3 class="freight-title">{{ $progess->title9 }}</h3>
+                                                            <h3 class="freight-title">{{ isset($progess->title9) ? $progess->title9 : '' }}</h3>
                                                             <div class="center-list">
                                                                 @php
-                                                                    if($progess->content9) {
+                                                                    if(isset($progess->content9)) {
                                                                         $list = explode("|",$progess->content9);
                                                                     }
 
@@ -412,10 +442,10 @@
                                                         </div>
                                                         <div class="row col-lg-12">
                                                             <div class="col-lg-5">
-                                                                <img src="assets/img/{{ $progess->img10 }}" />
+                                                                <img src="assets/img/{{ isset($progess->img10) ? $progess->img10 : '' }}" />
                                                             </div>
                                                             <div class="col-lg-7">
-                                                                <img src="assets/img/{{ $progess->img11 }}" />
+                                                                <img src="assets/img/{{ isset($progess->img11) ? $progess->img11 : '' }}" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -431,50 +461,63 @@
                                     <div class="col-lg-6 px-5 resource-card">
                                         <div class="col-lg-6 card-titles m-auto">Overview</div>
                                         <ul>
-                                            <li>Brief</li>
-                                            <li>FAQs</li>
-                                            <li>Legal framework</li>
+                                            <li><a href="https://www.aliveandthrive.org/sites/default/files/attachments/CoE-BF-Brief_ENG_19.8.2019.pdf"
+                                                    target="_blank">Brief</a></li>
+                                            <li><a href="https://www.aliveandthrive.org/sites/default/files/coe-faq_final.pdf"
+                                                    target="_blank">FAQs</a></li>
+                                            <li><a href="https://thuvienphapluat.vn/van-ban/The-thao-Y-te/Quyet-dinh-5913-QD-BYT-2021-Tieu-chi-danh-gia-Benh-vien-thuc-hanh-nuoi-con-bang-sua-me-499144.aspx"
+                                                    target="_blank">Legal framework</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6 px-5 resource-card">
                                         <div class="col-lg-7 card-titles m-auto">Coaching materials</div>
                                         <ul>
-                                            <li>Early Essential Newborn Care</li>
-                                            <li>Family Friendly Birthing Room</li>
-                                            <li>Caesarean birth</li>
+                                            <li>
+                                                <a target="_blank"
+                                                    href="https://www.aliveandthrive.org/en/resources/tot-coaching-on-early-essential-newborn-care-for-breathing-and-non-breathing-babies-0">Early
+                                                    Essential Newborn Care</a>
+
+                                            </li>
+                                            <li> <a href="https://www.aliveandthrive.org/en/resources/family-friendly-birthing-rooms"
+                                                    target="_blank">Family
+                                                    Friendly Birthing Room</a></li>
+                                            <li> <a href=""">Caesarean birth</a></li>
                                         </ul>
                                     </div>
-                                    <div class="col-lg-6 px-5 resource-card">
-                                        <div class="col-lg-7 card-titles m-auto">Brand guidelines</div>
-                                        <ul>
-                                            <li>Logo & brand guidelines</li>
-                                            <li>Signboard and certification templates</li>
-                                        </ul>
+                                    <div class=" col-lg-6 px-5 resource-card">
+                                                    <div class="col-lg-7 card-titles m-auto">Brand guidelines</div>
+                                                    <ul>
+                                                        <li><a href="https://fhi360web.sharepoint.com/sites/FHI360A%26TSEA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FFHI360A%26TSEA%2FShared%20Documents%2FGeneral%2FA%26T%20SEA%20Knowledge%20Hub%2F2%2E%20Communications%20%26%20Documentation%2F2%2E1%20Guidelines%2FLogo%20files%2FCoE%20Viet%20Nam%2FCoE%20branding%20guidelines%5FFULL%2Epdf&parent=%2Fsites%2FFHI360A%26TSEA%2FShared%20Documents%2FGeneral%2FA%26T%20SEA%20Knowledge%20Hub%2F2%2E%20Communications%20%26%20Documentation%2F2%2E1%20Guidelines%2FLogo%20files%2FCoE%20Viet%20Nam&p=true&wdLOR=c59252D9E%2D8893%2DB747%2D8FA2%2D7A5D85FBF52A&ga=1"
+                                                                target="_blank">Logo & brand guidelines</a></li>
+                                                        <li><a href="https://fhi360web.sharepoint.com/sites/FHI360A%26TSEA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FFHI360A%26TSEA%2FShared%20Documents%2FGeneral%2FA%26T%20SEA%20Knowledge%20Hub%2F2%2E%20Communications%20%26%20Documentation%2F2%2E1%20Guidelines%2FLogo%20files%2FCoE%20Viet%20Nam%2FCoE%20branding%20guidelines%5FFULL%2Epdf&parent=%2Fsites%2FFHI360A%26TSEA%2FShared%20Documents%2FGeneral%2FA%26T%20SEA%20Knowledge%20Hub%2F2%2E%20Communications%20%26%20Documentation%2F2%2E1%20Guidelines%2FLogo%20files%2FCoE%20Viet%20Nam&p=true&wdLOR=c94195245%2D44A3%2D0F4E%2DA6AF%2D4A114409FE01&ga=1"
+                                                                target="_blank"></a>Signboard and certification
+                                                            templates</li>
+                                                    </ul>
                                     </div>
                                     <div class="col-lg-6 px-5 resource-card">
                                         <div class="col-lg-6 card-titles m-auto">Job aids</div>
                                         <ul>
-                                            <li>Breastfeeding</li>
+                                            <li><a href="https://www.aliveandthrive.org/en/resources/posters-on-breastfeeding-no-formula-complementary-feeding-and-the-first-1000-days"
+                                                    target="_blank">Breastfeeding</a></li>
                                             <li>Early Essential Newborn Care</li>
                                             <li>Family Friendly Birthing Room</li>
-                                            <li>Caesarean birth</li>
+                                            <li><a href="https://fhi360web-my.sharepoint.com/personal/vduong_fhi360_org/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fvduong%5Ffhi360%5Forg%2FDocuments%2F1%2E%20CoE%2F000%2E%20Replication%2F1%2E%20CoE%20training%2F4%2E%20Giam%20SM&ga=1"
+                                                    target="_blank">Caesarean birth</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6 px-5 resource-card">
                                         <div class="col-lg-8 card-titles m-auto">Media & Communications</div>
                                         <ul>
-                                            <li>Promotional & documentary videos</li>
-                                            <li>Press release & media clipping</li>
+                                            <li><a href="https://www.youtube.com/watch?v=F9f6Nidxnig&list=PL3rKNU-jWPSTb321p8NjaiQESemtcjHDW"
+                                                    target="_blank"></a>Promotional & documentary videos</li>
                                             <li>Designation materials</li>
-                                            <li>Video documentaries</li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6 px-5 resource-card">
                                         <div class="col-lg-8 card-titles m-auto">setting-up & operation</div>
                                         <ul>
-                                            <li>Letter templates</li>
-                                            <li>Template for Departments of Health</li>
-                                            <li>Template for hospitals</li>
+                                            <li><a href="https://fhi360web.sharepoint.com/sites/FHI360A%26TSEA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FFHI360A%26TSEA%2FShared%20Documents%2FGeneral%2FA%26T%20SEA%20Knowledge%20Hub%2F5%2E%20Program%20Implementation%2FC%2E%20Countries%2FViet%20Nam%2FCOE%2F000%2E%20Replication%2F0%2E%20CoE%20orientation%2FMau%20cong%20van%20cho%20SYT&p=true&ga=1"
+                                                    target="_blank">Template documents to kick start COE</a></li>
                                         </ul>
                                     </div>
                                 </div>

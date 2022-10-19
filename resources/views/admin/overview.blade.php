@@ -69,7 +69,7 @@
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
+<!--                                     <tr>
                                         <th scope="row">img5</th>
                                         <td>
                                             <div class="form-group">
@@ -85,7 +85,7 @@
                                             </div>
                                             <a href="images/"><img src="assets/img/{{ isset($post->img5) ? $post->img5 : '' }}" style="width: 100px; cursor: pointer"></a>
                                         </td>
-                                    </tr>
+                                    </tr> -->
                                     <tr>
                                         <th scope="row">content2</th>
                                         <td>

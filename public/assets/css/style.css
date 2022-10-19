@@ -367,7 +367,7 @@ header .nav-left {
   border-color: #1a6268 transparent transparent;
   margin-top: -5px;
   position: relative;
-  left: 130px;
+  left: 145px;
   top: -8px;
 }
 
@@ -771,8 +771,7 @@ section {
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -864,6 +863,10 @@ section {
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
+.accordion-body {
+  padding: 0 !important;
+}
+
 .featured-services .icon-box {
   padding: 30px;
   position: relative;
@@ -1236,6 +1239,103 @@ section {
 --------------------------------------------------------------*/
 #banner {
   margin-top: 50px;
+  background-image: url('./../img/baner-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  margin-left: 0px;
+}
+
+#banner::before {
+  content: "";
+  width: 100%;
+  left: 0rem;
+  background: rgba(0, 0, 0, 0.35);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: absolute;
+  margin-left: 0px;
+  animation: opc 5s;
+  animation-fill-mode: forwards;
+  padding: 0;
+}
+
+.delay-logo {
+  position: absolute;
+}
+
+#banner .delay-logo>img {
+  height: 12rem;
+  width: 12rem;
+  position: relative;
+  animation: mymove 5s;
+  animation-fill-mode: forwards;
+  object-fit: cover;
+  left: 5rem;
+  ;
+}
+
+@keyframes mymove {
+  from {
+    top: -3rem;
+    opacity: 0;
+  }
+
+  to {
+    top: 3rem;
+    opacity: 1;
+  }
+}
+
+@keyframes opc {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.progress-banner .banner {
+  width: 100%;
+  height: 35rem;
+  object-fit: cover;
+
+}
+
+.progress-banner {
+  position: relative;
+}
+
+#tab-2.tab-pane.active.show .progress-banner p {
+  width: 23rem;
+  height: 20rem;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+  padding: 125px 50px;
+  animation: info 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes info {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .banner-left {
@@ -1295,7 +1395,7 @@ section {
 }
 
 .departments .nav-link h4 {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 400;
   transition: 0.3s;
 }
@@ -1387,7 +1487,7 @@ section {
 .excellent-img {
   max-height: 8rem;
   height: 170px;
-  width: 25% !important;
+  width: 105px !important;
   object-fit: contain !important;
   margin: auto;
   display: block;
@@ -1473,6 +1573,10 @@ section {
 
 .spl-right .spl-title {
   font-size: 14px;
+}
+
+.spl-right .spl-title a {
+  color: #777;
 }
 
 .spl-right .spl-on-time {
@@ -1604,7 +1708,7 @@ iframe {
 
 .content-service p {
   color: #fff !important;
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 
@@ -1771,12 +1875,16 @@ iframe {
 .resources-wrapper ul li {
   list-style: none;
   font-size: 16px;
-  color: #008a8d;
+  color: #000;
   font-weight: 600;
   padding: 10px 0;
   border-bottom: 1px solid #008a8d;
   margin: 20px 0 !important;
   cursor: pointer;
+}
+
+.resources-wrapper ul li a {
+  color: #000;
 }
 
 .resource-card {
@@ -1872,6 +1980,14 @@ iframe {
   font-weight: 900;
 }
 
+.coe-btn a {
+  color: #000;
+}
+
+.coe-btn a:hover {
+  color: #FFFFFF;
+}
+
 .coe-btn:hover {
   padding: 10px 45px;
   background: #b0eff0 0% 0% no-repeat padding-box;
@@ -1883,6 +1999,35 @@ iframe {
   font-size: 14px;
   font-weight: 900;
   color: #fff !important;
+}
+
+.vn-info img {
+  width: 40% !important;
+  object-fit: contain;
+}
+
+.vn-info-title {
+  padding: 15px 25px;
+
+}
+
+.vn-info-title h2 {
+  text-transform: initial !important;
+  color: #444444 !important;
+  margin-bottom: 0 !important;
+  width: 80%;
+  margin: auto;
+
+}
+
+.vn-info-title p {
+  text-transform: initial !important;
+  color: #444444 !important;
+  margin-bottom: 0 !important;
+  font-size: 13px;
+  font-weight: 500;
+  margin: auto;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -1926,6 +2071,7 @@ iframe {
   color: #008a8d;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 
 }
 
@@ -2059,9 +2205,14 @@ iframe {
   width: 10px;
   height: 10px;
   right: 1rem;
-  top: 15px;
-  color: #9c9f9c;
+  top: 30%;
+  color: #008a8d;
   ;
+}
+
+.center-list a {
+  color: #008a8d !important;
+  font-size: 14px;
 }
 
 .learn-more-exp {
